@@ -22,12 +22,12 @@ def show_item():
 def transaksi():
     while True:
         # menampilkan seluruh item yang tersedia
-        print("Daftar Item yang Tersedia")
+        print("Daftar Album yang Tersedia")
         show_item()
         
         # input id item dan jumlah yang ingin dibeli
-        id_item = input("Masukkan ID item yang ingin dibeli: ")
-        qty = int(input("Masukkan jumlah yang ingin dibeli: "))
+        id_item = input("Masukkan ID Album yang ingin dibeli : ")
+        qty = int(input("Masukkan jumlah yang ingin dibeli : "))
         
         # memeriksa apabila jumlah yang ingin dibeli melebihi stok
         for item in album:
@@ -73,10 +73,10 @@ def transaksi():
 # Admin
 def create():
     # input data item yang baru
-    id_item = input("Masukkan ID item: ")
-    nama_item = input("Masukkan nama item: ")
-    harga_item = input("Masukkan harga item: ")
-    stok_item = int(input("Masukkan stok item: "))
+    id_item = input("Masukkan ID Album: ")
+    nama_item = input("Masukkan Nama Album: ")
+    harga_item = input("Masukkan Harga Album: ")
+    stok_item = int(input("Masukkan Stok Album: "))
     
     # menambahkan item yang baru ke dalam database
     album.append([id_item, nama_item, harga_item, stok_item])
@@ -107,11 +107,11 @@ def update():
             show_item()
             break
     else:
-        print("Item tidak ditemukan")
+        print("Album tidak ditemukan")
 
 def delete():
     # input id item yang ingin dihapus
-    id_item = input("Masukkan ID item yang ingin dihapus: ")
+    id_item = input("Masukkan ID Album yang ingin dihapus: ")
     for i in range(len(album)):
         if album[i][0] == id_item:
             # menghapus item sesuai input id
@@ -121,7 +121,7 @@ def delete():
             show_item()
             break
     else:
-        print("Item tidak ditemukan")
+        print("Album tidak ditemukan")
     
 
 
@@ -178,21 +178,35 @@ while True:
         print("Input Anda Tidak Valid")
 
 
+
 ![Posttest2](https://github.com/fjarsra/posttest2/assets/144713730/724ebcea-1f9c-4d16-b0ae-f569eaf908fb)
 
 1. Menu Awal User
+   Disediakan Login untuk para pengguna jika login menggunakan akun admin dengan username : admin password : admin123 makan akan menjadi role admin, selain itu maka akan dianggap pembeli
 ![image](https://github.com/fjarsra/posttest2/assets/144713730/8bc4fd62-18d9-4bff-b2a0-8e9bd205b897)
-2. Menu Admin
+
+3. Menu Admin
+   Admin Dapat Memilih Untuk Create, Read, Update, dan delete
 ![image](https://github.com/fjarsra/posttest2/assets/144713730/52ccff15-a4eb-4915-92e6-6347a7869c64)
-3. Create
+
+5. Create
+   Admin dapat membuat Album baru untuk display di toko
 ![image](https://github.com/fjarsra/posttest2/assets/144713730/1354c3dd-276e-4350-ba7f-2b0d2890131d)
-4. Read
+
+7. Read
+   Admin Dapat melihat Display toko
 ![image](https://github.com/fjarsra/posttest2/assets/144713730/00334140-1773-4e32-8900-b5394c6c77bc)
-5. Update
+
+9. Update
+   Admin Dapat Meng Update Display Toko
 ![image](https://github.com/fjarsra/posttest2/assets/144713730/8ad7fdcc-5ded-41b4-877c-1a792e2ac5af)
-6. Delete
+
+11. Delete
+    Admin dapat menghapus salah satu diplay toko
 ![image](https://github.com/fjarsra/posttest2/assets/144713730/8ec1bdb0-bc04-4d41-ba71-a708a9d8ea18)
-7. Pembeli
+
+13. Pembeli
+    Pembeli memasukkan id dari Album yang ingin dibeli dan jumlah yang ingin dibeli, setelah itu akan otomatis dijumlahkan total harganya dan dibuatkan struk seperti gambar dibawah
 ![image](https://github.com/fjarsra/posttest2/assets/144713730/6c88657d-5e3e-4d01-a95c-b124de4581a1)
 
 
